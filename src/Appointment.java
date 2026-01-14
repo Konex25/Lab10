@@ -26,4 +26,11 @@ public class Appointment {
     public Doctor getDoctor() {
         return doctor;
     }
+
+    @Override
+    public String toString() {
+        String patientName = (patient != null) ? patient.getName() : "Unknown";
+        String doctorName = (doctor != null) ? doctor.getName() : "Unknown";
+        return "Appointment with " + doctorName + " for " + patientName + " at " + dateTime;
+    }
 }

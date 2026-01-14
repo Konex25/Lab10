@@ -53,7 +53,6 @@ public class Doctor extends Staff {
         }
 
         Prescription prescription = new Prescription(this, patient, treatments);
-        patient.addPrescription(prescription);
         return prescription;
     }
 

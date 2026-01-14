@@ -54,4 +54,13 @@ public class Prescription {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        String doctorName = (doctor != null) ? doctor.getName() : "Unknown";
+        String patientName = (patient != null) ? patient.getName() : "Unknown";
+        String status = active ? "Active" : "Inactive";
+        return "Prescription by " + doctorName + " for " + patientName 
+                + " (" + status + ", " + treatments.size() + " treatments, created " + createdAt + ")";
+    }
 }
